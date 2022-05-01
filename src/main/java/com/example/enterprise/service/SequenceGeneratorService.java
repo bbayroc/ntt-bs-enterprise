@@ -1,4 +1,4 @@
-package com.example.enterprise.Service;
+package com.example.enterprise.service;
 
 import com.example.enterprise.common.DatabaseSequence;
 import org.springframework.beans.factory.annotation.Autowired;

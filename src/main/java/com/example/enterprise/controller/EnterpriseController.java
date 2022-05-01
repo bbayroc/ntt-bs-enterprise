@@ -1,12 +1,10 @@
 package com.example.enterprise.controller;
 
-import com.example.enterprise.Service.SequenceGeneratorService;
+import com.example.enterprise.service.SequenceGeneratorService;
 import com.example.enterprise.entity.Enterprise;
 import com.example.enterprise.repository.EnterpriseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/Enterprises")
