@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  mongoenterprise:
+    build: 
+      context: .
+      dockerfile: Dockerfilemongo
+    environment:
+      - MONGO_INITDB_DATABASE=EnterpriseDB
+    ports:
+      - "27020:27017"
+    networks:
+      - default
+      - nttdata-net
+  enterpriseapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8083:8083"
+    depends_on:
+      - "mongoenterprise"
+    networks:
+      - default
+      - nttdata-net
+networks:
+  default: 
+    driver: bridge
+  nttdata-net:
+    external: true
+
